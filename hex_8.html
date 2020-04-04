@@ -1,0 +1,257 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>f i n d p a t t e r n</title>
+
+<meta name="title"                  content="FindPattern">
+<meta name="description"            content="Hacking NASA since 1997.">
+<meta property="og:title"           content="FindPattern">
+<meta property="og:description"     content="Hacking NASA since 1997.">
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Play&display=swap');
+
+
+html, body{
+height: 100%; width: 100%; margin: 0;
+padding: none;
+border: none;
+color: #fff;
+font-family: 'Play', sans-serif;
+background-color: #090c17;
+}
+
+.center{
+height: 75vh; width: 75vw;
+vertical-align: middle; text-align: center;
+position: absolute;
+padding: 12.5vh 12.5vw;
+}
+
+#background{
+position: fixed;
+width: 100%; height: 100%;
+opacity: 0.2;
+}
+
+#title{
+display: inline-block; vertical-align: middle;
+font-size: 60px;
+letter-spacing: 2px;
+margin-bottom: 0px;
+}
+
+#subtitle{
+font-size: 16px;
+}
+
+@keyframes blink {
+from, to {
+background-color: transparent
+}
+50% {
+background-color: white;
+}
+}
+
+</style>
+
+    <video id="background" src="porn.mp4" autoplay muted loop></video>
+
+<div class="center">
+
+    <p id="title">Find<font color="#5e7af7">Pattern</font></p>
+    <p id="subtitle"></p>
+    <div class="puzzle">
+
+         <input type="button" id="1" value="0" style="color:blue"  onclick="javascript:toggle1(this);">
+         <input type="button" id="2" value="0" style="color:blue"  onclick="javascript:toggle2(this);">
+         <input type="button" id="3" value="0" style="color:blue"  onclick="javascript:toggle3(this);">
+         <input type="button" id="4" value="0" style="color:blue"  onclick="javascript:toggle4(this);">
+         <input type="button" id="5" value="0" style="color:blue"  onclick="javascript:toggle5(this);">
+         <input type="button" id="6" value="0" style="color:blue"  onclick="javascript:toggle6(this);">
+         <input type="button" id="7" value="0" style="color:blue"  onclick="javascript:toggle7(this);">
+         <input type="button" id="8" value="0" style="color:blue"  onclick="javascript:toggle8(this);">
+
+    </div>
+</div>
+
+<script type="text/javascript">
+
+var b1 = "0";
+var b2 = "0";
+var b3 = "0";
+var b4 = "0";
+var b5 = "0";
+var b6 = "0";
+var b7 = "0";
+var b8 = "0";
+
+function toggle1(button) {
+	switch (button.value) {
+		case "0":
+			button.value = "1";
+			b1 = "1";
+			break;
+		case "1":
+			button.value = "0";
+			b1 = "0";
+			break;
+	}
+}
+
+function toggle2(button) {
+	switch (button.value) {
+		case "0":
+			button.value = "1";
+			b2 = "1";
+			break;
+		case "1":
+			button.value = "0";
+			b2 = "0";
+			break;
+	}
+}
+
+function toggle3(button) {
+	switch (button.value) {
+		case "0":
+			button.value = "1";
+			b3 = "1";
+			break;
+		case "1":
+			button.value = "0";
+			b3 = "0";
+			break;
+	}
+}
+
+function toggle4(button) {
+	switch (button.value) {
+		case "0":
+			button.value = "1";
+			b4 = "1";
+			break;
+		case "1":
+			button.value = "0";
+			b4 = "0";
+			break;
+	}
+}
+
+function toggle5(button) {
+	switch (button.value) {
+		case "0":
+			button.value = "1";
+			b5 = "1";
+			break;
+		case "1":
+			button.value = "0";
+			b5 = "0";
+			break;
+	}
+}
+
+function toggle6(button) {
+	switch (button.value) {
+		case "0":
+			button.value = "1";
+			b6 = "1";
+			break;
+		case "1":
+			button.value = "0";
+			b6 = "0";
+			break;
+	}
+}
+
+function toggle7(button) {
+	switch (button.value) {
+		case "0":
+			button.value = "1";
+			b7 = "1";
+			break;
+		case "1":
+			button.value = "0";
+			b7 = "0";
+			break;
+	}
+}
+
+function toggle8(button) {
+	switch (button.value) {
+		case "0":
+			button.value = "1";
+			b8 = "1";
+			break;
+		case "1":
+			button.value = "0";
+			b8 = "0";
+			break;
+	}
+}
+
+function subtitle() {
+
+	var text = [
+		`11`,`12`,`13`,`14`,`15`,`16`,`17`,`18`,`19`,`1A`,`1B`,`1C`,`1D`,`1E`,`1F`,
+		`21`,`22`,`23`,`24`,`25`,`26`,`27`,`28`,`29`,`2A`,`2B`,`2C`,`2D`,`2E`,`2F`,
+		`31`,`32`,`33`,`34`,`35`,`36`,`37`,`38`,`39`,`3A`,`3B`,`3C`,`3D`,`3E`,`3F`,
+		`41`,`42`,`43`,`44`,`45`,`46`,`47`,`48`,`49`,`4A`,`4B`,`4C`,`4D`,`4E`,`4F`,
+		`51`,`52`,`53`,`54`,`55`,`56`,`57`,`58`,`59`,`5A`,`5B`,`5C`,`5D`,`5E`,`5F`,
+		`61`,`62`,`63`,`64`,`65`,`66`,`67`,`68`,`69`,`6A`,`6B`,`6C`,`6D`,`6E`,`6F`,
+		`71`,`72`,`73`,`74`,`75`,`76`,`77`,`78`,`79`,`7A`,`7B`,`7C`,`7D`,`7E`,`7F`,
+		`81`,`82`,`83`,`84`,`85`,`86`,`87`,`88`,`89`,`8A`,`8B`,`8C`,`8D`,`8E`,`8F`,
+		`91`,`92`,`93`,`94`,`95`,`96`,`97`,`98`,`99`,`9A`,`9B`,`9C`,`9D`,`9E`,`9F`,
+		`A1`,`A2`,`A3`,`A4`,`A5`,`A6`,`A7`,`A8`,`A9`,`AA`,`AB`,`AC`,`AD`,`AE`,`AF`,
+		`B1`,`B2`,`B3`,`B4`,`B5`,`B6`,`B7`,`B8`,`B9`,`BA`,`BB`,`BC`,`BD`,`BE`,`BF`,
+		`C1`,`C2`,`C3`,`C4`,`C5`,`C6`,`C7`,`C8`,`C9`,`CA`,`CB`,`CC`,`CD`,`CE`,`CF`,
+		`D1`,`D2`,`D3`,`D4`,`D5`,`D6`,`D7`,`D8`,`D9`,`DA`,`DB`,`DC`,`DD`,`DE`,`DF`,
+		`E1`,`E2`,`E3`,`E4`,`E5`,`E6`,`E7`,`E8`,`E9`,`EA`,`EB`,`EC`,`ED`,`EE`,`EF`,
+		`F1`,`F2`,`F3`,`F4`,`F5`,`F6`,`F7`,`F8`,`F9`,`FA`,`FB`,`FC`,`FD`,`FE`,`FF`
+	];
+
+	$("#subtitle").fadeOut(function() {
+		var genRand = Math.floor(Math.random() * text.length);
+		while ($(this).html() === text[genRand]) {
+			genRand = Math.floor(Math.random() * text.length);
+		}
+		$(this).html(text[genRand]).fadeIn(1000);
+	});
+}
+
+setInterval(function() {
+	subtitle();
+}, 6000);
+
+setInterval(function() {
+
+	function hex2bin(functionOutput) {
+		return (parseInt(functionOutput, 16).toString(2)).padStart(8, '0');
+	}
+
+	var result = ""
+	var functionOutput = $('#subtitle').text();
+
+	functionOutput.split(" ").forEach(str => {
+		result += hex2bin(str)
+	})
+
+	functionOutput = $('#subtitle').text();
+	if (result == b1+b2+b3+b4+b5+b6+b7+b8) {
+		window.alert("MATCH!");
+	}
+}, 250);
+
+$(document).ready(function() {
+	subtitle();
+});
+
+		</script>
+	</body>
+</html>
